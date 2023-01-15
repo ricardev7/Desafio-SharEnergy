@@ -1,23 +1,22 @@
 import './App.css';
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import { PageCat } from './pages/cats';
+import { RequireAuth } from './contexts/Auth/RequireAuth';
+import { Login } from './pages/Login';
 import { Home } from './pages/Home';
-import { Private } from './pages/Private';
+import { Clients } from './pages/clients';
+import { PageDog } from './pages/dogs';
+
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <h1>Header do Site</h1>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/private">Página Privada</Link>
-        </nav>
-      </header>
-      <hr />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/private" element={<Private />} />
-        
+        <Route path="/" element={<Login />} />
+        <Route path='/home' element={<RequireAuth><Home /></RequireAuth>} />
+        <Route path="/cat" element={<RequireAuth><PageCat /></RequireAuth>} />
+        <Route path='/dog' element={<RequireAuth><PageDog /></RequireAuth>} />
+        <Route path='/clients' element={<RequireAuth><Clients /></RequireAuth>} />
       </Routes>
 
     </div>
