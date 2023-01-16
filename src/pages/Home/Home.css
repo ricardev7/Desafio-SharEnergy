@@ -53,7 +53,7 @@
     }
 
     .content-img img {
-        max-width: min(10vh, 100px);
+        max-width: min(14vh, 120px);
     }
 
 }

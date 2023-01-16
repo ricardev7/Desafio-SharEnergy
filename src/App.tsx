@@ -1,9 +1,9 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import { PageCat } from './pages/cats';
+import PageCat  from './pages/cats';
 import { RequireAuth } from './contexts/Auth/RequireAuth';
 import { Login } from './pages/Login';
-import { Home } from './pages/Home';
+import  Home  from './pages/Home';
 import { Clients } from './pages/clients';
 import { PageDog } from './pages/dogs';
 
