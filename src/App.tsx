@@ -5,7 +5,7 @@ import { RequireAuth } from './contexts/Auth/RequireAuth';
 import { Login } from './pages/Login';
 import  Home  from './pages/Home';
 import { Clients } from './pages/clients';
-import { PageDog } from './pages/dogs';
+import  PageDog  from './pages/dogs';
 
 
 function App() {

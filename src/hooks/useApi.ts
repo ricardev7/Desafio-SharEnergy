@@ -16,7 +16,7 @@ export const useApi = () => ({
     signin: async (username: string, password: string) => {
         const response = await api.post('/login', {username, password })
         console.log(response.data)
-        return response.data;
+        return response.data
     },
 
     logout: async () => {
@@ -24,3 +24,4 @@ export const useApi = () => ({
         return response.data;
     }
 })
+
