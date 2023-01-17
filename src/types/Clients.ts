@@ -1,4 +1,4 @@
-export type typeClients = {
+export type Clients = {
     name: string, 
     email: string,
     phone: string,

@@ -4,7 +4,7 @@ import PageCat  from './pages/cats';
 import { RequireAuth } from './contexts/Auth/RequireAuth';
 import { Login } from './pages/Login';
 import  Home  from './pages/Home';
-import { Clients } from './pages/clients';
+import  Clients  from './pages/clients';
 import  PageDog  from './pages/dogs';
 
 

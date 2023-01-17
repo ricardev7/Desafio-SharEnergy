@@ -15,9 +15,9 @@ const PageCat = () => {
             <h1>HTTP Cat</h1>
             <h5>Selecione um número abaixo:</h5>
             <select style={{padding: " 1px 8px"}} value={cat} onChange={(e) => setCat(e.target.value)}>
-                {statuscode.map((code) => {
+                {statuscode.map((code, index) => {
                     return (
-                        <option value={code}>{code}</option>   
+                        <option key={index} value={code}>{code}</option>   
                     )
                 })
 

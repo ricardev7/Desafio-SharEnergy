@@ -3,6 +3,7 @@ import { AuthContext } from "./AuthContext";
 import { User } from "../../types/User";
 import { useApi } from "../../hooks/useApi";
 
+
 export const AuthProvider = ({ children }: { children: JSX.Element }) => {
     const [user, setUser] = useState<User | null>(null);
     const api = useApi();
@@ -13,13 +14,14 @@ export const AuthProvider = ({ children }: { children: JSX.Element }) => {
             const data = await api.validateToken(storageData);
             if (data.user) {
                 setUser(data.user);
+                return true
             }
         }
     }
 
     useEffect(() => {
         validateToken()
-    }, []);
+    });
 
     const signin = async (username: string, password: string) => {
         const data = await api.signin(username, password);

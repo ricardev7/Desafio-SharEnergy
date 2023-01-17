@@ -6,7 +6,7 @@ const api = axios.create({
 
 
 export const useApi = () => ({
-    
+
     validateToken: async (token: string) => {
         const response = await api.post('/validate', { token })
         console.log(response.data)
@@ -14,7 +14,7 @@ export const useApi = () => ({
     },
 
     signin: async (username: string, password: string) => {
-        const response = await api.post('/login', {username, password })
+        const response = await api.post('/login', { username, password })
         console.log(response.data)
         return response.data
     },
@@ -22,6 +22,12 @@ export const useApi = () => ({
     logout: async () => {
         const response = await api.post('logout');
         return response.data;
+    },
+
+    createClient: async (name: string, email: string, phone: string, adress: string, cpf: string) => {
+        const response = await api.post('/create', { name, email, phone, adress, cpf })
+        console.log(response.data)
+        return response.data
     }
 })
 
